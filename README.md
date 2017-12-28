@@ -50,7 +50,11 @@ const config = {
     uptokenUrl: 'http://localhost/api/uptoken',
 
     // save zone
+<<<<<<< HEAD
     // z0 - 华东, z1 - 华北, z2 - 华南, na0 - 北美
+=======
+    // z0 - 华东 (by default), z1 - 华北, z2 - 华南, na0 - 北美
+>>>>>>> die-welle/master
     zone: 'z2',
 
     // or use a function to dynamically return uptoken string
@@ -98,18 +102,29 @@ const base64Key = btoa('my_file_name');
 tinyQiniu.uploadBase64(base64String, { base64key }).then((resp) => console.log(resp.url));
 ```
 
+
+## Available Zones
+
+- z0: `upload.qiniup.com` (default)
+- z1: `upload-z1.qiniup.com`
+- z2: `upload-z2.qiniup.com`
+- na0: `upload-na0.qiniup.com`
+
+Please checkout https://developer.qiniu.com/kodo/manual/1671/region-endpoint for detail
+
+
 ## Notes
 
 - It is recommended to setup a server to get `uptoken` for security. To setup a `uptoken` server, please checkout [/test/server](/test/server.js)
 - If you are looking for a react component, [tiny-qiniu-request](https://github.com/die-welle/tiny-qiniu-request) is a good helper
 
 
-## Testing
+## Contributing
 
-For more usage, please check the `./test` directory, or clone this repo and run `npm test` to start testing.
+[Please checkout the contributing page](/CONTRIBUTING.md)
 
-**IMPORTANT** Before run `npm test`, you should create a `qiniu.config.json` on `test` directory with the following example content:
 
+<<<<<<< HEAD
 ```json
 {
   "accessKey": "<Your qiniu AccessKey>",
@@ -119,6 +134,11 @@ For more usage, please check the `./test` directory, or clone this repo and run 
   "zone": "<Your qiniu save zone>"
 }
 ```
+=======
+## ChangeLog
+
+[Please checkout the Releases page](https://github.com/die-welle/tiny-qiniu/releases)
+>>>>>>> die-welle/master
 
 ## Change Log
 
